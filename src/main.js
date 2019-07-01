@@ -1,4 +1,5 @@
 import React from 'react'
+import './test.scss'
 
 class Main extends React.Component {
   render() {
