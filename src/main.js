@@ -6,10 +6,7 @@ import './test.scss'
 class Main extends React.Component {
   render() {
     return (
-      <span>
-        <h1>Hello, world</h1>
-        <h2>I love you</h2>
-      </span>
+      <h1>PReact Ready to Go!</h1>
     )
   }
 }
