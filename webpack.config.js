@@ -5,8 +5,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
   entry: './src/main.js',
   output: {
-    filename: 'main.js',
+    filename: 'app.js',
     path: path.resolve(__dirname, 'dist'),
+  },
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist'
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -15,10 +19,10 @@ module.exports = {
     }),
   ],
   mode: 'development',
-  "resolve": {
-    "alias": {
-      "react": "preact-compat",
-      "react-dom": "preact-compat"
+  resolve: {
+    alias: {
+      react: 'preact-compat',
+      'react-dom': 'preact-compat'
     }
   },
   module: {
@@ -33,7 +37,7 @@ module.exports = {
             plugins: [
               ['@babel/plugin-proposal-object-rest-spread'],
               ['@babel/plugin-proposal-class-properties'],
-              ["@babel/plugin-transform-react-jsx", { "pragma":"h" }]
+              ["@babel/plugin-transform-react-jsx"]
             ]
           }
         }
