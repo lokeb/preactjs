@@ -10,19 +10,21 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    writeToDisk: true
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlPlugin({
-      title: 'BabylonJS Starter',
+      title: 'PReactJS',
     }),
   ],
   mode: 'development',
   resolve: {
     alias: {
-      react: 'preact-compat',
-      'react-dom': 'preact-compat'
+      'react': 'preact/compat',
+      'react-dom/test-utils': 'preact/test-utils',
+      'react-dom': 'preact/compat'
     }
   },
   module: {
