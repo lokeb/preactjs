@@ -10,8 +10,7 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dist',
-    writeToDisk: true
+    contentBase: './dist'
   },
   plugins: [
     new CleanWebpackPlugin(),
