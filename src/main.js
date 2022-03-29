@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
-import './test.scss'
+import './style.scss'
 
 class Main extends React.Component {
   render() {
