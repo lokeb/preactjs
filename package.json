@@ -1,6 +1,6 @@
 {
   "name": "preact_starter",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "PReact Skeleton with Webpack build system",
   "repository": "git@github.com:lokeb/preactjs.git",
   "author": "Loknath Bharti",
