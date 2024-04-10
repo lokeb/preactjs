@@ -1,5 +1,5 @@
 import React from "react"
-import ReactDOM from "react-dom"
+import { createRoot } from 'react-dom/client'
 
 import './style.scss'
 
@@ -7,4 +7,5 @@ const Main = () => (
   <h1>PReact Ready to Go! {new Date().toTimeString()}</h1>
 )
 
-ReactDOM.render(<Main />, document.body)
+const root = createRoot(document.getElementById('app'))
+root.render(<Main />)

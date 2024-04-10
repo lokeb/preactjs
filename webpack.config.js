@@ -2,6 +2,8 @@ const path = require('path')
 const HtmlPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
+title='preactjs <Change it in webpack.config.js>'
+
 module.exports = {
   entry: './src/main.js',
   output: {
@@ -13,7 +15,16 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlPlugin({
-      title: 'PReactJS',
+      templateContent: `
+        <html>
+          <head>
+            <title>${title}</title>
+          </head>
+          <body>
+            <div id="app"/>
+          </body>
+        </html>
+      `
     }),
   ],
   mode: 'development',
@@ -61,7 +72,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|svg)$/,
+        test: /\.(jpg|png|svg)$/,
         use: [
           'file-loader'
         ]
