@@ -2,7 +2,10 @@ const path = require('path')
 const HtmlPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
-title='preactjs <Change it in webpack.config.js>'
+const title='preactjs <Change it in webpack.config.js>'
+
+const remoteHost = 'http://localhost'
+const remotePort = '80'
 
 module.exports = {
   entry: './src/main.js',
@@ -11,7 +14,13 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   devtool: 'inline-source-map',
-  devServer: {},
+  devServer: {
+    proxy: {
+      '/(link1|link2|link3)' : `${remoteHost}:${remotePort}`
+    },
+    open: true,
+    allowedHosts: ['*']
+  },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlPlugin({

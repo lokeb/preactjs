@@ -1,6 +1,6 @@
 {
   "name": "preact_starter",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "PReact Skeleton with Webpack build system",
   "repository": "git@github.com:lokeb/preactjs.git",
   "author": "Loknath Bharti",
@@ -31,9 +31,9 @@
     "webpack-dev-server": "4"
   },
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --config=webpack.production.config.js",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server"
   },
   "browserslist": [
     "defaults",
